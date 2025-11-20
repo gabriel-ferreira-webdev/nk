@@ -1,7 +1,21 @@
 @import "tailwindcss";
 
+@keyframes loop-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+@utility animate-loop-scroll {
+  animation: loop-scroll 50s linear infinite;
+}
+
+@utility paused {
+  animation-play-state: paused;
+}
 
 @layer utilities {
+
+    
     .animate-in {
         animation-fill-mode: both;
     }
@@ -45,3 +59,5 @@
         transform: translateY(0rem);
     }
 }
+
+
