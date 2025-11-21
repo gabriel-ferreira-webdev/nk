@@ -1,10 +1,10 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon, CircleStackIcon, ArrowsRightLeftIcon, MapIcon, ChartBarSquareIcon } from '@heroicons/react/24/outline'
 const features = [
     {
         name: 'Consultoria Estratégica',
         description:
             'Consultoria e Engenharia, Consultoria Técnica, Estudos de viabilidade técnica e econômica, Avaliação de Ativos (Impairment) para Concessionárias',
-        icon: CloudArrowUpIcon,
+        icon: CircleStackIcon,
     },
     {
         name: 'Estudos de Tráfego',
@@ -16,19 +16,19 @@ const features = [
         name: 'Planejamento Rodoviário',
         description:
             'Estudos de previsão de demanda para rodovias, Soluções completas para o desenvolvimento de projetos de infraestrutura em transporte',
-        icon: ArrowPathIcon,
+        icon: MapIcon,
     },
     {
         name: 'Monitoramento e Levantamentos Técnicos',
         description:
             'Monitoração operacional de rodovias, Estudos e Levantamentos Técnicos de Radares',
-        icon: FingerPrintIcon,
+        icon: ChartBarSquareIcon,
     },
 ]
 
 export default function Services() {
     return (
-        <div className="bg-gray-900 py-24 sm:py-32">
+        <div className="py-24 sm:py-32" id="sv">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
                     {/* <h2 className="text-base/7 font-semibold text-indigo-400">Deploy faster</h2> */}

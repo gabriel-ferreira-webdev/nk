@@ -9,11 +9,11 @@ import client2 from '../assets/clients/client (2).png';
 import client3 from '../assets/clients/client (3).png';
 import client4 from '../assets/clients/client (6).png';
 import client5 from '../assets/clients/client (5).png';
-
+import Hyperspeed from '../blocks/Backgrounds/Hyperspeed/Hyperspeed';
 const navigation = [
-  { name: 'Sobre', href: '#' },
-  { name: 'Serviços', href: '#' },
-  { name: 'Contato', href: '#' },
+  { name: 'Serviços', href: '#sv' },
+  { name: 'Sobre', href: '#sb' },
+  { name: 'Contato', href: '#ct' },
 ]
 
 export default function Example() {
@@ -51,7 +51,7 @@ export default function Example() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-white">
+            <a href="tel:551138844831" className="text-sm/6 font-semibold text-white">
               (11) 3884-4831 <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -92,7 +92,7 @@ export default function Example() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="#"
+                    href="tel:551138844831"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
                   >
                     (11) 3884-4831
@@ -104,9 +104,11 @@ export default function Example() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative bg-black isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-24 sm:py-32 lg:py-24">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+
+
             {/* <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
               Announcing our next round of funding.{' '}
               <a href="#" className="font-semibold text-indigo-400">
@@ -115,6 +117,48 @@ export default function Example() {
               </a>
             </div> */}
           </div>
+          <div className="absolute top-0 left-0 w-full h-full -z-10">
+            <Hyperspeed
+              effectOptions={{
+                onSpeedUp: () => { },
+                onSlowDown: () => { },
+                distortion: 'turbulentDistortion',
+                length: 800,
+                roadWidth: 20,
+                islandWidth: 2,
+                lanesPerRoad: 4,
+                fov: 90,
+                fovSpeedUp: 150,
+                speedUp: 2,
+                carLightsFade: 0.4,
+                totalSideLightSticks: 20,
+                lightPairsPerRoadWay: 40,
+                shoulderLinesWidthPercentage: 0.05,
+                brokenLinesWidthPercentage: 0.1,
+                brokenLinesLengthPercentage: 0.5,
+                lightStickWidth: [0.12, 0.5],
+                lightStickHeight: [1.3, 1.7],
+                movingAwaySpeed: [60, 80],
+                movingCloserSpeed: [-120, -160],
+                carLightsLength: [400 * 0.03, 400 * 0.2],
+                carLightsRadius: [0.05, 0.14],
+                carWidthPercentage: [0.3, 0.5],
+                carShiftX: [-0.8, 0.8],
+                carFloorSeparation: [0, 5],
+                colors: {
+                  roadColor: 0x080808,
+                  islandColor: 0x0a0a0a,
+                  background: 0x000000,
+                  shoulderLines: 0x131318,
+                  brokenLines: 0x131318,
+                  leftCars: [0xff102a, 0xeb383e, 0xff102a],
+                  rightCars: [0xdadafa, 0xbebae3, 0x8f97e4],
+                  sticks: 0xdadafa
+                }
+              }}
+            />
+          </div>
+
           <div className="text-center">
             <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
               Engenharia de transporte com mais segurança.

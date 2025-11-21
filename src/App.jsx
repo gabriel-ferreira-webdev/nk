@@ -5,11 +5,12 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
-  return <div className="min-h-screen bg-slate-950 text-white overflow-hidden">
+  return <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
     {/* <Navbar /> */}
     <Hero />
-    <About />
+
     <Services />
+    <About />
     <Contact />
     <Footer />
   </div>
