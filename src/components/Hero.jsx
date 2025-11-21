@@ -18,6 +18,7 @@ const navigation = [
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [hyperspeedEnabled, setHyperspeedEnabled] = useState(true)
 
   return (
     <div>
@@ -25,11 +26,11 @@ export default function Example() {
         <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">NK Engenharia</span>
               <img
                 alt=""
                 src={logo}
-                className="h-8 w-auto"
+                className="h-16 w-auto"
               />
             </a>
           </div>
@@ -50,9 +51,13 @@ export default function Example() {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="tel:551138844831" className="text-sm/6 font-semibold text-white">
-              (11) 3884-4831 <span aria-hidden="true">&rarr;</span>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6">
+            <a href="tel:1138844831" className="text-sm/6 font-semibold text-white">
+              (11) 3884-4831
+            </a>
+
+            <a href="mailto:contato@nk.eng.br" className="text-sm/6 font-semibold text-white">
+              contato@nk.eng.br
             </a>
           </div>
         </nav>
@@ -61,7 +66,7 @@ export default function Example() {
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">NK Engenharia de Transporte</span>
                 <img
                   alt=""
                   src={logo}
@@ -97,6 +102,12 @@ export default function Example() {
                   >
                     (11) 3884-4831
                   </a>
+                  <a
+                    href="mailto:contato@nk.eng.br"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5"
+                  >
+                    contato@nk.eng.br
+                  </a>
                 </div>
               </div>
             </div>
@@ -118,45 +129,47 @@ export default function Example() {
             </div> */}
           </div>
           <div className="absolute top-0 left-0 w-full h-full -z-10">
-            <Hyperspeed
-              effectOptions={{
-                onSpeedUp: () => { },
-                onSlowDown: () => { },
-                distortion: 'turbulentDistortion',
-                length: 800,
-                roadWidth: 20,
-                islandWidth: 2,
-                lanesPerRoad: 4,
-                fov: 90,
-                fovSpeedUp: 150,
-                speedUp: 2,
-                carLightsFade: 0.4,
-                totalSideLightSticks: 20,
-                lightPairsPerRoadWay: 40,
-                shoulderLinesWidthPercentage: 0.05,
-                brokenLinesWidthPercentage: 0.1,
-                brokenLinesLengthPercentage: 0.5,
-                lightStickWidth: [0.12, 0.5],
-                lightStickHeight: [1.3, 1.7],
-                movingAwaySpeed: [60, 80],
-                movingCloserSpeed: [-120, -160],
-                carLightsLength: [400 * 0.03, 400 * 0.2],
-                carLightsRadius: [0.05, 0.14],
-                carWidthPercentage: [0.3, 0.5],
-                carShiftX: [-0.8, 0.8],
-                carFloorSeparation: [0, 5],
-                colors: {
-                  roadColor: 0x080808,
-                  islandColor: 0x0a0a0a,
-                  background: 0x000000,
-                  shoulderLines: 0x131318,
-                  brokenLines: 0x131318,
-                  leftCars: [0xff102a, 0xeb383e, 0xff102a],
-                  rightCars: [0xdadafa, 0xbebae3, 0x8f97e4],
-                  sticks: 0xdadafa
-                }
-              }}
-            />
+            {hyperspeedEnabled && (
+              <Hyperspeed
+                effectOptions={{
+                  onSpeedUp: () => { },
+                  onSlowDown: () => { },
+                  distortion: 'turbulentDistortion',
+                  length: 800,
+                  roadWidth: 20,
+                  islandWidth: 2,
+                  lanesPerRoad: 4,
+                  fov: 90,
+                  fovSpeedUp: 150,
+                  speedUp: 2,
+                  carLightsFade: 0.4,
+                  totalSideLightSticks: 20,
+                  lightPairsPerRoadWay: 40,
+                  shoulderLinesWidthPercentage: 0.05,
+                  brokenLinesWidthPercentage: 0.1,
+                  brokenLinesLengthPercentage: 0.5,
+                  lightStickWidth: [0.12, 0.5],
+                  lightStickHeight: [1.3, 1.7],
+                  movingAwaySpeed: [60, 80],
+                  movingCloserSpeed: [-120, -160],
+                  carLightsLength: [400 * 0.03, 400 * 0.2],
+                  carLightsRadius: [0.05, 0.14],
+                  carWidthPercentage: [0.3, 0.5],
+                  carShiftX: [-0.8, 0.8],
+                  carFloorSeparation: [0, 5],
+                  colors: {
+                    roadColor: 0x080808,
+                    islandColor: 0x0a0a0a,
+                    background: 0x000000,
+                    shoulderLines: 0x131318,
+                    brokenLines: 0x131318,
+                    leftCars: [0xff102a, 0xeb383e, 0xff102a],
+                    rightCars: [0xdadafa, 0xbebae3, 0x8f97e4],
+                    sticks: 0xdadafa
+                  }
+                }}
+              />
+            )}
           </div>
 
           <div className="text-center">
@@ -168,12 +181,12 @@ export default function Example() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#ct"
                 className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
                 Contato
               </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
+              <a href="#sv" className="text-sm/6 font-semibold text-white">
                 Saber mais<span aria-hidden="true">→</span>
               </a>
             </div>
@@ -222,6 +235,14 @@ export default function Example() {
               />
             </div>
           </div>
+
+          <button
+            onClick={() => setHyperspeedEnabled(!hyperspeedEnabled)}
+            className="absolute bottom-8 right-8 px-4 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors text-sm font-semibold text-white"
+            title={hyperspeedEnabled ? "Desativar Hyperspeed" : "Ativar Hyperspeed"}
+          >
+            {hyperspeedEnabled ? 'Desligar Animação' : 'Ligar Animação'}
+          </button>
 
         </div>
       </div>
