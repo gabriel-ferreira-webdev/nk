@@ -1,16 +1,86 @@
-# React + Vite
+### NK Civil Engineering Web Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An enterprise-grade, high-performance web platform engineered for NK Civil Engineering to showcase large-scale infrastructure projects, manage corporate branding, and optimize digital client acquisition pipelines.
 
-Currently, two official plugins are available:
+**Live Production Link:** nk-navy-eight.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* * *
 
-## React Compiler
+### 🚀 Architectural & Engineering Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Optimized Rendering Engine:** Built on top of **React** and **Vite** for blistering fast Hot Module Replacement (HMR) and lightweight asset compilation.
+*   **Performance Engineering:** Tailored to hit exceptional **Core Web Vitals** scores. Implemented strict responsive asset optimization, lazy-loading component hierarchies, and modern styling via Tailwind CSS to minimize cumulative layout shifts (CLS) and maximize largest contentful paint (LCP).
+*   **Production Deployment:** Fully integrated into a continuous deployment (CI/CD) pipeline hosted on **Vercel** with global edge caching.
+*   **Advanced AI Workflows:** Developed using an AI-native engineering framework. Leveraged contextual code creation tools (**Windsurf / Cursor**) to accelerate the feature-shipping lifecycle while enforcing modular component architecture and clean code conventions.
 
-## Expanding the ESLint configuration
+* * *
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🛠️ Technology Stack
+
+*   **Core Framework:** React 18+ / JavaScript (ES2025+)
+*   **Build Utility:** Vite
+*   **Styling Architecture:** Tailwind CSS (Utility-first configuration)
+*   **Code Quality Control:** ESLint (Flat config structure)
+*   **Deployment Infrastucture:** Vercel Global Edge Network
+
+* * *
+
+### 📦 Local Installation & Development Setups
+
+Follow these steps to spin up the local development environment seamlessly:
+
+1.  **Clone the repository:**
+    
+    bash
+    
+        git clone https://github.com
+        cd nk
+        
+    
+    Use code with caution.
+    
+2.  **Install exact dependency lockfile:**
+    
+    bash
+    
+        npm install
+        
+    
+    Use code with caution.
+    
+3.  **Launch local hot-reloading development server:**
+    
+    bash
+    
+        npm run dev
+        
+    
+    Use code with caution.
+    
+4.  **Compile production-ready optimized build bundle:**
+    
+    bash
+    
+        npm run build
+        
+    
+    Use code with caution.
+    
+
+* * *
+
+### 📈 Search Visibility & Technical SEO Strategy
+
+This platform applies corporate-level SEO structures designed to boost search presence:
+
+*   Semantic HTML5 semantic landmarks (`<section>`, `<article>`, `<header>`) for accessibility and crawlability.
+*   Compressed component styling footprints to minimize critical rendering path blockages.
+*   Responsive layouts carefully prototyped inside Figma and translated to pixel-perfect utility classes.
+
+* * *
+
+### 👨‍💻 Developer & Contractor Contact
+
+*   **Engineer:** Gabriel Ferreira
+*   **Email:** gabriel.ferreira.webdev@gmail.com
+*   **Portfolio:** gabrielwebdev.vercel.app
